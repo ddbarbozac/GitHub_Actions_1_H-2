@@ -1,0 +1,8 @@
+name: Saludo
+on: [push, fork, pull_request, create]
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decir hola
+        run: echo "Hola mundo desde GitHub Actions"	
