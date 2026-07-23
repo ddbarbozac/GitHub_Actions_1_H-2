@@ -5,8 +5,10 @@ jobs:
   detectar-evento:
     runs-on: ubuntu-latest
     steps:
-      - name: Mostrar tipo de evento
-        run: echo "El autor es: ${{ github.actor }}"
+      - name: Mostrar el autor
+        run: |
+          echo "El autor es: ${{ github.actor }}"
 
-      - name: Mostrar tipo de evento
-        run: echo "El evento que me activó fue: ${{ github.event_name }}"
+      - name: Mostrar el tipo de evento
+        run: |
+          echo "El evento que me activó fue: ${{ github.event_name }}"        
