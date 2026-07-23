@@ -1,8 +1,12 @@
-name: Saludo
-on: [push, fork, pull_request, create]
+name: Eventos
+on: [push, pull_request]
+
 jobs:
-  saludo:
+  detectar-evento:
     runs-on: ubuntu-latest
     steps:
-      - name: Decir hola
-        run: echo "Hola mundo desde GitHub Actions"	
+      - name: Mostrar tipo de evento
+        run: echo "El autor es: ${{ github.actor }}"
+
+      - name: Mostrar tipo de evento
+        run: echo "El evento que me activó fue: ${{ github.event_name }}"
